@@ -19,5 +19,5 @@ Prepare a barebone SPA with Angular with these following features:
 ## Resouces:
 
 https://www.youtube.com/watch?v=bGe3z19rm50
-
 https://github.com/aws-amplify
+https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
