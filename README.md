@@ -1,6 +1,12 @@
 # pocAngularServerless
-Angular SPA project for server less architecture
+Angular SPA project for server less architecture which will be used with AWS services 
 
+##Technology stack
+1) Angular 
+2) AWS Cognito
+3) AWS API Gateway
+4) AWS Lambd Function
+5) AWS DynamoDB
 
 ###Step 1
 Prepare a barebone SPA with Angular with these following features:
