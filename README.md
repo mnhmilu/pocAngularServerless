@@ -10,11 +10,11 @@ Angular SPA project for server less architecture which will be used with AWS ser
 
 ### Steps
 Prepare a barebone SPA with Angular with these following features:
-1) Basic framework architecture
-2) Basic Routing with login page sample
-3) Integrate Cognito for Register User
-4) Integrate Cognito for Login User
-5) Role....
+- [x] 1) Basic framework architecture
+- [] 2) Basic Routing with login page sample
+- [] 3) Integrate Cognito for Register User
+- [] 4) Integrate Cognito for Login User
+- [] 5) Role....
 
 ## Resouces:
 
