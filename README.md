@@ -12,7 +12,7 @@ Angular SPA project for server less architecture which will be used with AWS ser
 Prepare a barebone SPA with Angular with these following features:
 - [x] 1) Basic framework architecture
 
-Add Bootstrap and Jquery support
+*** Add Bootstrap and Jquery support
 
 
 - [] 2) Basic Routing with login page sample
