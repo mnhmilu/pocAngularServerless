@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthorizationService} from '../authorization.service'
 
 @Component({
   selector: 'app-formexample',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formexample.component.css']
 })
 export class FormexampleComponent implements OnInit {
-
+  confirmCode: boolean = false;
   contactMethods: any;
-  constructor() {
+  error: string = "";
+
+  constructor(private auth:AuthorizationService) {
     console.log("from cons");
    }
 
@@ -28,10 +31,28 @@ export class FormexampleComponent implements OnInit {
 
   submit(x) {
     //print whole form
+
     console.log(x);
 
     // capture the value
     console.log(x.value.contact.comment);
+ 
+  //  this.auth.register("mnhmilu@gmail.com","test123");
+
+   // console.log("Registration Done");
+
+   this.auth.register("mnhmilu@gmail.com","Test123Dfdf#dd").subscribe(
+    (data) => {        
+      this.confirmCode = true;
+      console.log("Registration Done");
+    },
+    (err) => {
+      console.log(err);
+      this.error = "Registration Error has occurred";
+    }
+  );
+
+ 
   }
 
 }

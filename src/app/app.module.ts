@@ -8,6 +8,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { FormexampleComponent } from './formexample/formexample.component';
+import {AuthorizationService} from './authorization.service'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { FormexampleComponent } from './formexample/formexample.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthorizationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
