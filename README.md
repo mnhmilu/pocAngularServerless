@@ -14,6 +14,10 @@ Prepare a barebone SPA with Angular with these following features:
 
 *** Add Bootstrap and Jquery support
 
+Add dependencies
+
+npm i rxjs-compat
+
 
 - [] 2) Basic Routing with login page sample
 - [] 3) Integrate Cognito for Register User
