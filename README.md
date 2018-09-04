@@ -36,3 +36,7 @@ Adding Bootstrap & Jquery
 > https://github.com/aws-amplify
 
 > https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
+
+Fix:
+
+> https://stackoverflow.com/questions/50209019/angular-6-auth0-global-not-defined
