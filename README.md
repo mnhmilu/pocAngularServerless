@@ -35,6 +35,8 @@ Adding Bootstrap & Jquery
 
 > https://github.com/aws-amplify
 
+> https://github.com/kousekt/angularcognitotest
+
 > https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
 
 Fix:
