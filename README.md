@@ -14,6 +14,10 @@ Prepare a barebone SPA with Angular with these following features:
 
 *** Add Bootstrap and Jquery support
 
+Add dependencies
+
+npm i rxjs-compat
+
 
 - [] 2) Basic Routing with login page sample
 - [] 3) Integrate Cognito for Register User
@@ -31,4 +35,10 @@ Adding Bootstrap & Jquery
 
 > https://github.com/aws-amplify
 
+> https://github.com/kousekt/angularcognitotest
+
 > https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/
+
+Fix:
+
+> https://stackoverflow.com/questions/50209019/angular-6-auth0-global-not-defined
