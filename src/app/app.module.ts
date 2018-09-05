@@ -8,7 +8,14 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { FormexampleComponent } from './formexample/formexample.component';
-import {AuthorizationService} from './authorization.service'
+import {AuthorizationService} from './authorization.service';
+import { SignupComponent } from './signup/signup.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { SigninComponent } from './signin/signin.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import {AuthGuardService} from './auth-guard.service';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +24,19 @@ import {AuthorizationService} from './authorization.service'
     Test2Component,
     DashboardComponent,
     RegisterComponent,
-    FormexampleComponent
+    FormexampleComponent,
+    SignupComponent,
+    ConfirmationComponent,
+    SigninComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [AuthorizationService],
+  providers: [AuthorizationService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

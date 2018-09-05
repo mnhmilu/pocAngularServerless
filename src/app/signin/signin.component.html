@@ -1,0 +1,51 @@
+
+ <h3 style="text-align:center">Sign In</h3>
+ <div class="container">
+ <form #f="ngForm" (ngSubmit)="submit(f)" >
+     <!-- <div *ngIf="!contact.valid">
+      group validation 
+   </div> -->
+   
+     <div ngModelGroup="signin">
+       <div class="form-group">
+         <label for="ddd"> Email (*)
+         </label>
+         <input required minlength="3" maxlength="50" ngModel name="email" #email="ngModel" (change)="log(email)" id="email"
+           type="text" class="form-control">
+         <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+           <div *ngIf="email?.errors.required">
+             Email is required
+           </div>
+           <div *ngIf="email?.errors.minlength">
+             Email should be minimum 3
+           </div>
+           <div *ngIf="email?.errors.maxlength">
+             Email should not be maximum 50
+           </div>
+         </div>
+       </div>
+ 
+       <div class="form-group">
+         <label for="ddd"> Password (*)
+         </label>
+         <input required minlength="3" maxlength="20" ngModel name="password" #password="ngModel" (change)="log(password)" id="password"
+           type="text" class="form-control">
+         <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+           <div *ngIf="password?.errors.required">
+             Password is required
+           </div>
+           <div *ngIf="password?.errors.minlength">
+             Passsword should be minimum 10
+           </div>
+           <div *ngIf="password?.errors.maxlength">
+             Passsword should not be maximum 20
+           </div>
+         </div>
+       </div>
+ 
+       
+         <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+     </div>
+   </form>
+ 
+ </div>

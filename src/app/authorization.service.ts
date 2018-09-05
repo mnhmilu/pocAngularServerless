@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import {AuthenticationDetails, CognitoUser, CognitoUserPool,CognitoUserAttribute} from 'amazon-cognito-identity-js';
 import { Observable } from 'rxjs/Observable';
+import {
+  CanActivate, Router,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot
+}                           from '@angular/router';
 
 const poolData = {
   UserPoolId: 'ap-south-1_KoBLw4eiO', // Your user pool id here
@@ -12,7 +17,7 @@ const userPool = new CognitoUserPool(poolData);
 @Injectable()
 export class AuthorizationService {
   cognitoUser: any;
-
+  redirectUrl: string;
   constructor() { }
 
   register(email, password) {
@@ -89,6 +94,11 @@ export class AuthorizationService {
         },
       });
     });
+  }
+
+  canActivate() {
+    console.log("AlwaysAuthGuard");
+    return this.isLoggedIn();
   }
 
   isLoggedIn() {    
