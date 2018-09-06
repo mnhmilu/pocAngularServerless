@@ -1,7 +1,27 @@
+<style>
+  table {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+  }
 
-
-
-<p style="text-align:center" >
-  dashboard works!
-</p>
-
+  td {
+    padding: 10px 0;
+  }
+</style>
+<section>
+  <h2>Rest Api Output</h2>
+  <table align="center">
+    <thead>
+      <tr>        
+        <th>Product Name</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of _data">        
+          <td>{{item.productName}}</td>  
+          <td>{{item.message}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

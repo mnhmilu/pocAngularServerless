@@ -15,6 +15,7 @@ import { SigninComponent } from './signin/signin.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import {AuthGuardService} from './auth-guard.service';
+import {HttpModule} from "@angular/http";
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {AuthGuardService} from './auth-guard.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [AuthorizationService,AuthGuardService],
   bootstrap: [AppComponent]
