@@ -42,3 +42,5 @@ Adding Bootstrap & Jquery
 Fix:
 
 > https://stackoverflow.com/questions/50209019/angular-6-auth0-global-not-defined
+
+> https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html
