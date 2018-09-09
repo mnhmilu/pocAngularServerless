@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import {AuthGuardService} from './auth-guard.service';
 import {HttpModule} from "@angular/http";
+import { DataEntryExampleComponent } from './data-entry-example/data-entry-example.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {HttpModule} from "@angular/http";
     ConfirmationComponent,
     SigninComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    DataEntryExampleComponent
   ],
   imports: [
     BrowserModule,

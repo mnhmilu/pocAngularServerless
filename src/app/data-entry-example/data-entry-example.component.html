@@ -1,0 +1,58 @@
+<p style="text-align:center">
+  formexample works!
+</p>
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+    <!-- <div *ngIf="!contact.valid">
+       group validation 
+    </div> -->
+
+    <div ngModelGroup="item">
+      <div class="form-group">
+        <label for="ddd"> Product Name
+        </label>
+        <input required minlength="3" maxlength="15" ngModel name="productName" #productName="ngModel" (change)="log(productName)"
+          id="productName" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="productName.touched && !productName.valid">
+          <div *ngIf="productName.errors.required">
+            Product name is required
+          </div>
+          <div *ngIf="productName.errors.minlength">
+            Product name should be minimum 3
+          </div>
+          <div *ngIf="productName.errors.maxlength">
+            Product name should be maximum 10
+          </div>
+        </div>
+      </div>
+
+
+
+   
+        <div class="form-group">
+          <label for="ddd"> Message
+          </label>
+          <input required minlength="3" maxlength="15" ngModel name="message" #message="ngModel" (change)="log(message)" id="message"
+            type="text" class="form-control">
+          <div class="alert alert-danger" *ngIf="message.touched && !message.valid">
+            <div *ngIf="message.errors.required">
+              Message is required
+            </div>
+            <div *ngIf="message.errors.minlength">
+              Message name should be minimum 3
+            </div>
+            <div *ngIf="message.errors.maxlength">
+              Message name should be maximum 10
+            </div>
+          </div>
+        </div>
+
+
+      <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+
+    </div>
+
+
+
+  </form>
+  </div>

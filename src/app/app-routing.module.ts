@@ -9,6 +9,7 @@ import {SigninComponent} from './signin/signin.component';
 import {HeaderComponent} from './header/header.component';
 import {HomeComponent} from './home/home.component';
 import {AuthGuardService} from './auth-guard.service';
+import {DataEntryExampleComponent} from './data-entry-example/data-entry-example.component';
 
 const routes: Routes =[
   { path: 'dashboard', component: DashboardComponent,canActivate: [AuthGuardService] },
@@ -19,7 +20,8 @@ const routes: Routes =[
   {path:'signup',component:SignupComponent},
   {path:'signin',component:SigninComponent},
   {path:'header',component:HeaderComponent},
-  {path:'home',component:HomeComponent}
+  {path:'home',component:HomeComponent},
+  {path:'exampleDataEntry',component:DataEntryExampleComponent,canActivate: [AuthGuardService]}
   
 
   
