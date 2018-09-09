@@ -58,19 +58,7 @@ export class DataEntryExampleComponent implements OnInit {
         const headers = new Headers();
         headers.append('authorization', token);        
 
-        /*
-        this.http.get('https://lj32zdat97.execute-api.ap-south-1.amazonaws.com/test/test', { headers: headers })
-          .subscribe(
-          response => {           
-            that._data = response.json().Items;
-            console.log(that._data);
-          },
-          error => {
-            console.log(error);
-          }
-        );
-        */
-
+  
 
         console.log("form data message"+formdata.value.item.message)
 
