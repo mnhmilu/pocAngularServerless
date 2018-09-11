@@ -6,10 +6,13 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot
 }                           from '@angular/router';
+import { environment } from '../environments/environment';
+
+
 
 const poolData = {
-  UserPoolId: 'ap-south-1_KoBLw4eiO', // Your user pool id here
-  ClientId: '326ldbu009muperjd2g81h7919' // Your client id here  
+  UserPoolId:environment.UserPoolId ,//'ap-south-1_KoBLw4eiO', // Your user pool id here
+  ClientId:environment.ClientId //'326ldbu009muperjd2g81h7919' // Your client id here  
 };
 
 const userPool = new CognitoUserPool(poolData);

@@ -13,7 +13,7 @@ import {DataEntryExampleComponent} from './data-entry-example/data-entry-example
 
 const routes: Routes =[
   { path: 'dashboard', component: DashboardComponent,canActivate: [AuthGuardService] },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {path:'test2',component:Test2Component},
   {path:'register',component:RegisterComponent},
   {path:'formexample',component:FormexampleComponent},

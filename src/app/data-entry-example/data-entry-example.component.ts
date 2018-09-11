@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-data-entry-example',
@@ -67,13 +68,19 @@ export class DataEntryExampleComponent implements OnInit {
          "message":formdata.value.item.message,
          "productName":formdata.value.item.productName
        }
+  
 
-     
-          return this.http.post('post url',postdata,{ headers: headers})
+          var apiUrl = environment.apiUrlForPost;
+
+
+          console.log("url log"+apiUrl);
+
+          return this.http.post(apiUrl,postdata,{ headers: headers})
           .subscribe(
             response => {           
-               that._data = response.json();
+              that._data = response.json();
               console.log(that._data);
+              this.router.navigate(['/dashboard']);
             },
             error => {
               console.log(error);

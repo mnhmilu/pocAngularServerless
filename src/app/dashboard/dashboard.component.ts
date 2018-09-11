@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthorizationService } from '../authorization.service'
 import {Router} from "@angular/router";
 import {Http, Headers} from "@angular/http";
+import { environment } from '../../environments/environment';
 
 
 @Component({
@@ -41,7 +42,11 @@ export class DashboardComponent implements OnInit {
         const token = session.getIdToken().getJwtToken();        
         const headers = new Headers();
         headers.append('authorization', token);        
-        this.http.get('url', { headers: headers })
+
+        var apiUrl = environment.apiUrlForRead;
+        console.log("url log"+apiUrl);
+
+        this.http.get(apiUrl, { headers: headers })
           .subscribe(
           response => {           
             that._data = response.json().Items;
