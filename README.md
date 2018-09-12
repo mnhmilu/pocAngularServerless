@@ -27,6 +27,7 @@ npm i rxjs-compat
 ## Common Angular Command
 
 > ng serve --open   // to run angular 
+
 > ng generate component somecomponent  // to generate new component 
 
 ## Resouces:
