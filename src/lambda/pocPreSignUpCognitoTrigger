@@ -1,0 +1,18 @@
+exports.handler = (event, context, callback) => {
+    // TODO implement
+   console.log("Pre Signup SNS Trigger");
+   
+    const AWS =require ('aws-sdk');
+    // call SNS topic to publish a notificaiton via SNS
+    var eventText = JSON.stringify(event, null, 2);
+    console.log("Received event:", eventText);
+    var sns = new AWS.SNS();
+    var params = {
+        Message: eventText, 
+        Subject: "SignUp Attemp Performed",
+        TopicArn: "Your Topic ARN"
+    };
+    sns.publish(params, context.done);
+    callback(null, event);
+    
+};
