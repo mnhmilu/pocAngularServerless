@@ -13,6 +13,7 @@ exports.handler = (event, context, callback) => {
         TopicArn: "Your Topic ARN"
     };
     sns.publish(params, context.done);
-    callback(null, event);
+    callback(null, event);// very important 
+   
     
 };
