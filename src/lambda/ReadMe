@@ -4,3 +4,6 @@ Cognito Trigger Example
 
 >  https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html
 
+git hub 
+
+> https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sqs/sqs_deletequeue.js
