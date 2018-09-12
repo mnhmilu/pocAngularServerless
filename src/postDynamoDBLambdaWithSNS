@@ -2,7 +2,7 @@
 console.log('starting TestNodeLambda functiion');
 
 const AWS =require ('aws-sdk');
-const docClient = new AWS.DynamoDB.DocumentClient({region:'ap-south-1'});
+const docClient = new AWS.DynamoDB.DocumentClient({region:''});
 
 exports.handler = (event, context, callback) => {
     
