@@ -1,0 +1,23 @@
+console.log('starting TestLambdaDynamoRead functiion');
+
+const AWS =require ('aws-sdk');
+const docClient = new AWS.DynamoDB.DocumentClient({region:'your region'});
+
+exports.handler = (event, context, callback) => {
+      let scanningParameters={
+      TableName:'guestbook',
+      Limit:100
+  };
+
+  docClient.scan(scanningParameters,function(err,data){
+      
+      if(err)
+      {
+          callback(err,null);
+      }else
+      {
+          callback(null,data);          
+      }     
+    });
+  
+};
