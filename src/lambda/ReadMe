@@ -7,3 +7,8 @@ Cognito Trigger Example
 git hub 
 
 > https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/sqs/sqs_deletequeue.js
+
+
+Class Ref
+
+> https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#receiveMessage-property
