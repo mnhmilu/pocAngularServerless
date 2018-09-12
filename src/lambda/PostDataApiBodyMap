@@ -1,0 +1,4 @@
+{
+ "message": $input.json('$.message'),
+ "productName":$input.json('$.productName')
+}
