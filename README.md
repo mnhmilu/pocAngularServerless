@@ -24,6 +24,11 @@ npm i rxjs-compat
 - [] 4) Integrate Cognito for Login User
 - [] 5) Role....
 
+## Common Angular Command
+
+> ng serve --open   // to run angular 
+> ng generate component somecomponent  // to generate new component 
+
 ## Resouces:
 Adding Bootstrap & Jquery
 
