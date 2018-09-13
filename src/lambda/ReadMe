@@ -12,3 +12,11 @@ git hub
 Class Ref
 
 > https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#receiveMessage-property
+
+
+
+SQS Configuration
+
+> Configure ReceiveMessage Wait time to 5 sec
+
+> All SQS Action
