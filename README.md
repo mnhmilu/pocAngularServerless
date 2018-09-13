@@ -2,11 +2,13 @@
 Angular SPA project for server less architecture which will be used with AWS services 
 
 ## Technology stack
-1) Angular 
+1) Angular SPA 
 2) AWS Cognito
 3) AWS API Gateway
-4) AWS Lambd Function
+4) AWS Lambda Function
 5) AWS DynamoDB
+6) AWS SQS (from Console with Lambda Trigger) 
+7) AWS CloudWatch
 
 ### Steps
 Prepare a barebone SPA with Angular with these following features:
