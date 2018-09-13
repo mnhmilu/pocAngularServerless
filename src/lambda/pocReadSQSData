@@ -1,0 +1,44 @@
+console.log('sqs process started...........');
+const AWS =require ('aws-sdk');
+exports.handler = (event, context, callback) => {
+    // TODO implement
+   
+   var sqs = new AWS.SQS({region: 'your region'});
+ 
+   var params = {
+ 
+    QueueUrl: 'you queue url',
+    MaxNumberOfMessages: 1,
+   // VisibilityTimeout: 60, // seconds - how long we want a lock on this job
+    //WaitTimeSeconds: 3 // seconds - how long should we wait for a message?
+  };
+  sqs.receiveMessage(params, function(err, data) {
+       if(err) {
+            console.log('error#########################################:',"Fail recv Message " + err);
+            context.done('error', "ERROR Recieve SQS");  // ERROR with message
+        }
+        else {
+          
+           console.log('******************************Receiving data *************************************');
+          
+            if(!data.Messages || data.Messages.length === 0) {
+                console.log('No messages on queue');
+                context.done(null, null);  // SUCCESS
+            }
+            else {
+                var message = '';
+    
+                console.log("data length is "+ data.Messages.length)
+                
+                for(var k = 0; k < data.Messages.length; k++) {
+                    message = data.Messages[k];
+                    //console.log((k + 1) + ': ' + data.Messages[k]); //.Messages[0].Body);
+                    console.log("data is "+message.Body);
+               
+       
+                }
+                context.done(null, message.Body);  // SUCCESS 
+            }
+        }
+
+  });
