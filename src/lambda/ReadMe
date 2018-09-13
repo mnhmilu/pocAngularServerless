@@ -13,6 +13,9 @@ Class Ref
 
 > https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SQS.html#receiveMessage-property
 
+Manupulate SQS Message 
+
+> https://gist.github.com/danyim/6708c47c7dc8de30224c
 
 
 SQS Configuration
